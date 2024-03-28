@@ -1,0 +1,16 @@
+.diagnosis {
+    &__hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: -1rem;
+        position: relative;
+    }
+    &__icon1 {
+        width: 30%;
+    }
+    &__icon2 {
+        width: 40%;
+        margin-bottom: 2rem;
+    }
+}

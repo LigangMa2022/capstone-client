@@ -1,0 +1,9 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+    padding: 1rem;
+    &__Icon {
+        width: 3rem;
+    }
+}

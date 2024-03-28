@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home {
+    &__header {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__maskgroup {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__mask {
+        margin-right: 1rem;
+    }
+    &__morning {
+        color: #ADADAD;
+    }
+    &__search {
+        width: 100%;
+        border-radius: 2rem;
+        height: 2.5rem;
+        padding: 0 2.5rem;
+    }
+    &__searchIcon {
+        position: absolute;
+        padding: 0.75rem;
+    }
+    &__searchsection{
+        padding: 1rem;
+    }
+    &__category {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    &__category--title {
+        padding: 1rem;
+    }
+    &__cat {
+        padding-left: 0.5rem;
+    }
+    &__appointments {
+        padding: 1rem;
+    }
+    &__appointments--title {
+        padding: 0.5rem 0;
+    }
+    &__appointments--content {
+        color: #c4c4c4;
+        padding: 0.5rem 0;
+    }
+    &__nearbyDocs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__nearbyDocs--title {
+        padding: 1rem;
+    }
+    &__nearbyDoc {
+        box-shadow: 1px 1px 2px 2px #e8f3f1;
+    }
+}

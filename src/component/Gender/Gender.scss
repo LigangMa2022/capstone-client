@@ -1,0 +1,11 @@
+.Gender {
+    display: flex;
+    justify-content:flex-start;
+    padding: 0.25rem 3rem;
+    &__select {
+        margin-right: 2rem;
+    }
+    &__title {
+        padding: 0 0 2rem 2rem;
+    }
+}

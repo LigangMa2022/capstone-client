@@ -1,20 +1,10 @@
-.DiagnosisPage1 {
+.DiagnosisPage2 {
     &__header {
         padding: 2rem;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        width: 50%;
-    }
-    &__text {
-        padding: 2rem;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-    }
-    &__title {
-        padding-bottom: 1rem;
+        width: 75%;
     }
     &__button {
         border-radius: 2rem;
@@ -24,6 +14,14 @@
         margin: 2.5rem;
         color: white;
         font-weight: bold;
+    }
+    &__form--text {
+        padding: 2rem;
+    }
+    &__form--input {
+        height: 1.75rem;
+        border-color:#0096c7;
+        margin: 0.5rem 0 1.5rem 2rem;
     }
 }
 

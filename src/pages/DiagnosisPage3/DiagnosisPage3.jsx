@@ -28,22 +28,20 @@ function DiagnosisPage3 (){
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log(selectedSymptoms);
-        console.log(inputSymptoms);
+        console.log("selectedSymptoms: ",selectedSymptoms);
+        console.log("inputSymptoms: ",inputSymptoms);
         return (
             axios.post (
-                `${baseUrl}/diagnosis/selectedSymptoms`,
+                `${baseUrl}/diagnosis3`,
                 {
-                    selectedSymptoms
+                    selectedSymptoms,
+                    inputSymptoms
                 }
-            ),
-            axios.post(
-                `${baseUrl}/diagnosis/enterSymptoms`,
             ).then(()=>{
-                navigate("/diagnosis3")
+                navigate("/diagnosis4")
             })
         )
-    }
+    };
 
     const totalSymptoms = inputSymptoms.split(',').filter(Boolean).length + selectedSymptoms.length;
     const strength = Math.min(totalSymptoms / 5 * 100, 100);
@@ -51,7 +49,7 @@ function DiagnosisPage3 (){
     return (
         <div className="symptom">
             <div className="symptom__header">
-                <Link to="/diagnosis1" >
+                <Link to="/diagnosis2" >
                     <img src={arrowBack} className="header__arrowBack" alt="arrowBack" />
                 </Link>
                 <h3>Specify Symptoms</h3>

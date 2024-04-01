@@ -12,7 +12,7 @@ const Footer = () => {
             <Link to="/" >
                 <img src={homeIcon} className="footer__Icon" alt="home Icon" />
             </ Link>
-            <Link to="/diagnosis" >
+            <Link to="/diagnosis1" >
                 <img src={diagnosisIcon} className="footer__Icon" alt="diagnosis Icon" />
             </ Link>
             <Link to="/booking" >

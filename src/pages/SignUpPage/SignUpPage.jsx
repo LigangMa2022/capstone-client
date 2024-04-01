@@ -6,11 +6,12 @@ import passwordIcon from "./../../assets/icons/Password.jpg";
 import userIcon from "./../../assets/icons/User-Outline.png";
 import axios from 'axios';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function SignUpPage (){
     const baseUrl = "http://localhost:8084";
     const signupUrl = `${baseUrl}/signup`;
+    const navigate = useNavigate();
 
     const [error, setError] = useState("");
     const [success, setSuccess] = useState(false);
@@ -20,7 +21,7 @@ function SignUpPage (){
         axios.post(
             signupUrl,
             {
-                username: event.target.username.value,
+                name: event.target.username.value,
                 email: event.target.email.value,
                 password: event.target.password.value
             })
@@ -28,6 +29,7 @@ function SignUpPage (){
                 setSuccess(true);
                 setError("");
                 event.target.reset();
+                // navigate("/login");
             })
             .catch((error) => {
                 setSuccess(false);
@@ -36,7 +38,7 @@ function SignUpPage (){
     }
 
     return (
-        <div class="signup">
+        <div className="signup">
             <HeaderSignUp />
             <Diagnosis />
 
@@ -60,7 +62,9 @@ function SignUpPage (){
                 </div>
 
                 <button type="submit" className="signup__button">Sign Up</button>
-                {success && <div className="signup__message">Signed up!</div>}
+                {success && <div className="signup__message">
+                    Successfully signed up! Thank you for using our app!
+                    Please login now</div>}
                 {error && <div className="signup__message">{error}</div>}
             </form>
 

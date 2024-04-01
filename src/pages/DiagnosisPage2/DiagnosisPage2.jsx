@@ -14,7 +14,7 @@ function DiagnosisPage2 (){
         e.preventDefault();
         return (
             axios.post (
-                `${baseUrl}/diagnosis`,
+                `${baseUrl}/diagnosis2`,
                 {
                     AgeGroup: e.target.AgeGroup__select.value,
                     Height: e.target.height.value,
@@ -22,7 +22,9 @@ function DiagnosisPage2 (){
                     Gender: e.target.Gender__select.value
                 }
             ).then(()=>{
-                navigate("/diagnosis3")
+                navigate("/diagnosis3");
+            }).catch((error) => {
+                console.log(error);
             })
         );
     };

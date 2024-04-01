@@ -32,7 +32,7 @@ function LoginPage (){
     };
 
     return (
-        <div class="login">
+        <div className="login">
             <HeaderLogin />
             <Diagnosis />
 

@@ -1,6 +1,6 @@
 import "./../DiagnosisPage4/DiagnosisPage4.scss"
 import arrowBack from './../../assets/icons/Back.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 
@@ -10,6 +10,7 @@ function DiagnosisPage4 (){
 
     const [diagnosisData, setDiagnosisData] = useState([]);
     const baseUrl = "http://localhost:8084";
+
 
     useEffect(() => {
       // Fetch diagnosisData from the backend
@@ -25,6 +26,8 @@ function DiagnosisPage4 (){
       getDiagnosisData()
     },[]);
 
+
+
     return (
         <div className="diagnosis">
             <div className="diagnosis__header">
@@ -37,15 +40,19 @@ function DiagnosisPage4 (){
                 {diagnosisData.map((item)=>{
                     return (
                         <li className="diagnosis__li" key={item.IssueID}>
-                            <div>IssueID: {item.IssueID}</div>
-                            <div>Issue Name: {item.IssueName}</div>
-                            <div>IssueIcdName: {item.IssueIcdName}</div>
-                            <div>IssueProfName: {item.IssueProfName}</div>
-                            <div>Issue Accuracy: {item.IssueAccuracy}</div>
+                            <Link className="diagnosis__link"
+                             key={item.IssueID} to={`/issues/${item.IssueID}`}>
+                                <div>IssueID: {item.IssueID}</div>
+                                <div>Issue Name: {item.IssueName}</div>
+                                <div>IssueIcdName: {item.IssueIcdName}</div>
+                                <div>IssueProfName: {item.IssueProfName}</div>
+                                <div>Issue Accuracy: {item.IssueAccuracy}</div>
+                            </Link>
                         </li>
                     )
                 })}
             </ul>
+
         </div>
     )
 }

@@ -9,6 +9,7 @@ import DiagnosisPage3 from './pages/DiagnosisPage3/DiagnosisPage3';
 import DiagnosisPage4 from './pages/DiagnosisPage4/DiagnosisPage4';
 import BookingPage from './pages/BookingPage/BookingPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
+import IssuesPage from './pages/IssuesPage/IssuesPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/diagnosis2" element={<DiagnosisPage2 />} />
           <Route path="/diagnosis3" element={<DiagnosisPage3 />} />
           <Route path="/diagnosis4" element={<DiagnosisPage4 />} />
+          <Route path="/issues/:issueID" element={<IssuesPage />} />
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>

@@ -28,8 +28,6 @@ function DiagnosisPage3 (){
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log("selectedSymptoms: ",selectedSymptoms);
-        console.log("inputSymptoms: ",inputSymptoms);
         return (
             axios.post (
                 `${baseUrl}/diagnosis3`,
@@ -45,6 +43,7 @@ function DiagnosisPage3 (){
 
     const totalSymptoms = inputSymptoms.split(',').filter(Boolean).length + selectedSymptoms.length;
     const strength = Math.min(totalSymptoms / 5 * 100, 100);
+
 
     return (
         <div className="symptom">
@@ -133,10 +132,10 @@ function DiagnosisPage3 (){
                     <section className="symptom__yours">
                         <h3 className="symptom__title">Your symptoms : </h3>
                         <ul className="symptom__ul">
-                            <li>{inputSymptoms}</li>
                             {selectedSymptoms.map((symptom) => (
                                 <li className="symptom__li">{symptom},  </li>
                             ))}
+                            <li>{inputSymptoms}</li>
                         </ul>
                     </section>
 

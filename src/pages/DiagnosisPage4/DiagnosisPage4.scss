@@ -10,7 +10,12 @@
         list-style-type: none;
     }
     &__li {
-        background-color: aquamarine;
-        padding: 1rem;
+        background-color: #e8f3f1;
+        color: black;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+    &__link {
+        text-decoration: none;
     }
 }

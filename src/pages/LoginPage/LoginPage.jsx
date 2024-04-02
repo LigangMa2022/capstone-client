@@ -1,5 +1,5 @@
 import "./../LoginPage/LoginPage.scss"
-import HeaderLogin from "../../component/HeaderLogin/HeaderLogin";
+import HeaderLogin from "./../../component/HeaderLogin/HeaderLogin";
 import Diagnosis from "./../../component/Diagnosis/Diagnosis";
 import emailIcon from "./../../assets/icons/Email.png";
 import passwordIcon from "./../../assets/icons/Password.jpg";

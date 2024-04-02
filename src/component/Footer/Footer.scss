@@ -2,9 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: self-end;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
     &__Icon {
-        width: 3rem;
+        width: 1.875rem;
+    }
+    &__link {
+        text-decoration: none;
+    }
+    &__text {
+        position: relative;
+        left: -0.5rem;
+        color: black;
     }
 }

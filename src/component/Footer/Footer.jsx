@@ -9,17 +9,21 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div className="footer">
-            <Link to="/" >
+            <Link to="/" className="footer__link" >
                 <img src={homeIcon} className="footer__Icon" alt="home Icon" />
+                <p className='footer__text'>Home</p>
             </ Link>
-            <Link to="/diagnosis1" >
+            <Link to="/diagnosis1" className="footer__link" >
                 <img src={diagnosisIcon} className="footer__Icon" alt="diagnosis Icon" />
+                <p className='footer__text'>Diagnosis</p>
             </ Link>
-            <Link to="/booking" >
+            <Link to="/booking" className="footer__link" >
                 <img src={bookingIcon} className="footer__Icon" alt="booking Icon" />
+                <p className='footer__text'>Booking</p>
             </ Link>
-            <Link to="/profile" >
+            <Link to="/profile" className="footer__link" >
                 <img src={profileIcon} className="footer__Icon" alt="profile Icon" />
+                <p className='footer__text'>Profile</p>
             </ Link>
         </div>
     );

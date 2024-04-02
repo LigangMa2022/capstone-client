@@ -1,0 +1,7 @@
+@use "./styles/partials/typography" as *;
+
+body {
+    font-family: "Avenir","Calibri","Segoe UI";
+    font-weight: 400;
+    background-color: white;
+}

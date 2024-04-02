@@ -65,19 +65,19 @@ function HomePage (){
                 <h2 className="home__nearbyDocs--title">Nearby doctors</h2>
                 <div className="home__nearbyDocs">
                     <div className="home__nearbyDoc">
-                        <img src={doc1} alt="" />
+                        <img className="home__docphoto" src={doc1} alt="" />
                         <p>Dr.Markus Horiz</p>
-                        <p>★ 4.7 ⟟ 800m away</p>
+                        <p>★ 4.7 ⟟ 800m</p>
                     </div>
                     <div className="home__nearbyDoc">
-                        <img src={doc2} alt="" />
+                        <img className="home__docphoto" src={doc2} alt="" />
                         <p>Dr.Maria Elena</p>
-                        <p>★ 4.8 ⟟ 500m away</p>
+                        <p>★ 4.8 ⟟ 500m</p>
                     </div>
                     <div className="home__nearbyDoc">
-                        <img src={doc3} alt="" />
+                        <img className="home__docphoto" src={doc3} alt="" />
                         <p>Dr.Stevi Jessi</p>
-                        <p>★ 4.2 ⟟ 300m away</p>
+                        <p>★ 4.2 ⟟ 300m</p>
                     </div>
                 </div>
                 <Footer />

@@ -3,6 +3,7 @@ import arrowBack from './../../assets/icons/Back.png';
 import doc1 from "./../../assets/icons/doc1a.png";
 import { Link } from 'react-router-dom';
 import TimeCards from "../../component/TimeCards/TimeCards";
+import Footer from "./../../component/Footer/Footer";
 
 function BookingPage (){
     return (
@@ -51,6 +52,7 @@ function BookingPage (){
             <div className="booking__buttongroup">
                 <button className="booking__button">Next</button>
             </div>
+            <Footer />
 
 
             

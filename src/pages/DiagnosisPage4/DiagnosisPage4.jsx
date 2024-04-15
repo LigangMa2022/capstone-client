@@ -26,8 +26,6 @@ function DiagnosisPage4 (){
       getDiagnosisData()
     },[]);
 
-
-
     return (
         <div className="diagnosis">
             <div className="diagnosis__header">

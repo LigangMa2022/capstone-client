@@ -1,12 +1,13 @@
 import "./../IssuesPage/IssuesPage.scss"
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import arrowBack from './../../assets/icons/Back.png';
 
 function IssuesPage (){
     const [selectedIssue, setSelectedIssue] = useState({});
     const params = useParams();
-    const defaultissueID = 446;
+    const defaultissueID = 431;
     const baseUrl = "http://localhost:8084";
 
     // get one Issue based on issueID from diagnosis data
@@ -31,6 +32,12 @@ function IssuesPage (){
 
     return (
         <div className="issue">
+            <div className="header">
+                <Link to="/diagnosis3" >
+                    <img src={arrowBack} className="header__arrowBack" alt="arrowBack" />
+                </ Link>
+                <h1>Issue Details</h1>
+            </div>
             <div className="issue__text">
                 <h3>Selected Issue:</h3>
                 <h4>Issue ID: {selectedIssue.ID}</h4>
